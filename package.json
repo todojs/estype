@@ -1,0 +1,17 @@
+{
+  "name": "estype",
+  "version": "0.0.1",
+  "description": "EcmaScript Type Checker",
+  "main": "estype.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "keywords": [
+    "type",
+    "javascript",
+    "ecmascript",
+    "6"
+  ],
+  "author": "todojs",
+  "license": "ISC"
+}
