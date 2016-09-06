@@ -5,6 +5,8 @@ const type = require('./estype');
 // Primitive types
 console.assert(type(null)                                     === 'null');
 console.assert(type(undefined)                                === 'undefined');
+console.assert(type()                                         === 'undefined');
+console.assert(type(void(0))                                  === 'undefined');
 console.assert(type("hello")                                  === 'string');
 console.assert(type(`hello`)                                  === 'string');
 console.assert(type('hello')                                  === 'string');
