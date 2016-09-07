@@ -125,5 +125,15 @@ class MyDate2 extends MyDate {
 console.assert(type(MyDate2)                                  === 'function');
 console.assert(type(new MyDate2(2016, 0, 1))                  === 'MyDate2');
 
+// Pedro Gómez (fix)
+var a = function() {};
+var b = new a();
+console.assert( type(a)                                       === 'function');
+console.assert( type(b)                                       === 'a');
+
+var c = new (function() {});
+console.assert( type(c)                                       === 'anonymous function');
+
+
 process.exit(0);
 
