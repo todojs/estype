@@ -7,7 +7,7 @@ function typeDebug(value) {
         }
         if (typeof value.constructor === 'function' &&
             (r = value.constructor.name) !== 'Object') {
-            if (r === '') {
+            if (r === '' || r === undefined) {
                 return Function.prototype.toString.call(value.constructor)
                     .match(/^\n?(function|class)(\w?)/)[2] || 'anonymous';
             }

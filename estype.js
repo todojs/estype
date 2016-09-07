@@ -7,7 +7,7 @@ function type(value) {
                 'null' :
                 (typeof value.constructor === 'function' &&
                 (r = value.constructor.name) !== 'Object') ?
-                    (r === '') ?
+                    (r === '' || r === undefined) ?
                         Function.prototype.toString.call(value.constructor)
                             .match(/^\n?(function|class)(\w?)/)[2] || 'anonymous' :
                         r
