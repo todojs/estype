@@ -1,6 +1,6 @@
 {
   "name": "estype",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "EcmaScript Type Checker",
   "main": "estype.js",
   "scripts": {
@@ -13,5 +13,13 @@
     "6"
   ],
   "author": "todojs",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todojs/estype.git"
+  },
+  "bugs": {
+    "url": "https://github.com/todojs/estype/issues"
+  },
+  "homepage": "https://github.com/todojs/estype#readme"
 }
