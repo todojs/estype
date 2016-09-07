@@ -7,7 +7,7 @@ EcmaScript Type Checker.
 Installing with npm:
 
 ```bash
-$ npm install estodojs --save
+$ npm install estype --save
 ```
 
 This module does not have dependencies.
