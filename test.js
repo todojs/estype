@@ -132,8 +132,18 @@ console.assert( type(a)                                       === 'function');
 console.assert( type(b)                                       === 'a');
 
 var c = new (function() {});
-console.assert( type(c)                                       === 'anonymous function');
+console.assert( type(c)                                       === 'anonymous');
 
+// Object.setPrototypeOf()
+console.assert( type(Object.setPrototypeOf({}, null))           === 'Object');
+console.assert( type(Object.setPrototypeOf({}, Date.prototype)) === 'Date');
+
+// Reflect.setPrototypeOf()
+var baseObject = {};
+Reflect.setPrototypeOf(baseObject, Object.prototype);
+console.assert( type(baseObject)                               === 'Object');
+Reflect.setPrototypeOf(baseObject, Date.prototype);
+console.assert( type(baseObject)                               === 'Date');
 
 process.exit(0);
 

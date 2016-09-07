@@ -6,10 +6,10 @@ function typeDebug(value) {
             return 'null';
         }
         if (typeof value.constructor === 'function' &&
-            (r = Function.prototype.toString.call(value.constructor)
-                .match(/^\n?(function|class)\s*(\w*)/)[2]) !== 'Object') {
+            (r = value.constructor.name) !== 'Object') {
             if (r === '') {
-                return value.constructor.name || 'anonymous function';
+                return Function.prototype.toString.call(value.constructor)
+                    .match(/^\n?(function|class)(\w?)/)[2] || 'anonymous';
             }
             return r;
         }
